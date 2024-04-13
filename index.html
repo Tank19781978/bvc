@@ -19,8 +19,8 @@
         :target::before {
             content: "";
             display: block;
-            height: 80px; /* Give height of your fixed header */
-            margin: -80px 0 0; /* Give negative margin of your fixed header */
+            height: 300px; /* Give height of your fixed header */
+            margin-top: -300px; /* Give negative margin of your fixed header */
         }
     </style>
 </head>
@@ -32,7 +32,7 @@
                 <div class="text-xl font-semibold">
                     <img src='https://i.postimg.cc/zfBRnC4s/bvc-logo-1-black.png' alt='bvc-logo-1-black' class="h-10 px-5 md:px-2 sm:px-1" /></a>
                 </div>
-                <nav class=" space-x-4">
+                <nav class="space-x-1 sm:space-x-1 md:space-x-2 lg:space-x-4">
                     <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
                     <a href="#team" class="text-gray-600 hover:text-gray-900">Team</a>
                     <a href="#portfolio" class="text-gray-600 hover:text-gray-900">Portfolio</a>
@@ -162,15 +162,27 @@
     <script>
         // He's a smooooooooooth operator - used so wen click header, it flows
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+        anchor.addEventListener('click', function (e) {
+        e.preventDefault();
 
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'start' // Aligns the section to the top of the viewport
-                });
+        var headerHeight = 50; // Replace with the actual height of your header
+        const targetID = this.getAttribute('href');
+        const targetElement = document.querySelector(targetID);
+
+        if (targetElement) {
+            const targetPosition = targetElement.getBoundingClientRect().top;
+            var offsetPosition = targetPosition + window.pageYOffset - headerHeight;
+            if(targetID=="#about"){
+                offsetPosition = targetPosition+window.pageYOffset - 150;
+            }
+            window.scrollTo({
+                top: offsetPosition,
+                behavior: 'smooth'
             });
-        });
+        }
+    });
+});
+
     </script>
     <footer class="py-20"></footer> <!--gimmmme some space-->
 </body>
