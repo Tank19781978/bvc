@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,7 +7,8 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,377;1,377&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,377;1,377&display=swap"
+        rel="stylesheet">
     <style>
         body {
             font-family: 'Roboto Mono', sans-serif;
@@ -15,30 +17,57 @@
             font-style: normal;
 
         }
+
         /* Additional styles to ensure the sticky header doesn't cover the section titles */
         :target::before {
             content: "";
             display: block;
-            height: 100px; 
-            margin-top: -100px; 
+            height: 100px;
+            margin-top: -100px;
         }
+
         #userPFP {
             transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
             border-radius: 20px;
         }
+
         .grid img:hover {
             transform: scale(1.03);
             opacity: 0.8;
         }
-        .headerFontSize{
-            font-size:3.5vw;
+
+        .headerFontSize {
+            font-size: 3.5vw;
         }
-        .smallLogoPicture{
+
+        .smallLogoPicture {
             width: 9vw;
-            height:3vh;
+            height: 3vh;
         }
 
+        .hover-underline {
+            position: relative;
+            text-decoration: none;
+            color: grey;
+            transition: color 0.5s ease;
+        }
 
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 1px;
+            background-color: grey;
+            transition: transform 0.8s ease;
+            transform: scaleX(0);
+            transform-origin: left center;
+        }
+
+        .hover-underline:hover::after {
+            transform: scaleX(1);
+        }
     </style>
 </head>
 
@@ -51,19 +80,21 @@
 
                 <div class="flex-grow-0">
 
-                    <img src='https://i.postimg.cc/MKN03k9d/BVC-1.png' alt='bvc-logo-1-black' class="smallLogoPicture sm:h-10 sm:w-full px-0 lg:pl-28 md:pl-10 sm:pl-5" /></a>
+                    <img src='https://i.postimg.cc/MKN03k9d/BVC-1.png' alt='bvc-logo-1-black'
+                        class="smallLogoPicture sm:h-10 sm:w-full px-0 lg:pl-28 md:pl-10 sm:pl-5" /></a>
                 </div>
 
                 <nav class="headerFontSize flex-grow text-center sm:text-xl space-x-0 sm:space-x-6 ">
-                    <a href="#about" class="text-gray-600 hover:text-gray-900">About</a>
-                    <a href="#team" class="text-gray-600 hover:text-gray-900">Team</a>
-                    <a href="#portfolio" class="text-gray-600 hover:text-gray-900">Portfolio</a>
+                    <a href="#about" class="text-gray-600 hover-underline  ">About</a>
+                    <a href="#team" class="text-gray-600 hover-underline ">Team</a>
+                    <a href="#portfolio" class="text-gray-600 hover-underline ">Portfolio</a>
                 </nav>
-                <div class="flex-grow sm:flex-grow-0 lg:pr-28 md:pr-10 sm:pr-5"></div>
+                <div class=" sm:flex-grow-0 lg:pr-28 md:pr-10 sm:pr-5"></div>
 
                 <div class="text-gray-600 cursor-pointer">
                     <a href="https://twitter.com/akajdang" target="_blank">
-                    <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" alt="twitter-logo"class= "h-3 w-3 sm:h-5 sm:w-5">
+                        <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" alt="twitter-logo"
+                            class="h-3 w-3 sm:h-3.5 sm:w-3.5">
                     </a>
                 </div>
             </div>
@@ -73,13 +104,15 @@
     <div class="container mx-auto px-4 lg:px-28 md:px-10 sm:px-5">
         <section class="my-24 flex flex-col items-center" id="about">
             <h2 class="text-left text-3xl font-semibold mb-6">
-             About Us
+                About Us
             </h2>
             <p class="text-gray-600 mb-12 text-left max-w-xl items-center">
-             Discover some unique digital collectibles on the Solana blockchain. Your pass is more than just an asset; it represents your identity and grants you access to a community where you will have exclusive access to everything within power brand. In this community, we are all shaping the future of pooki.
+                Discover some unique digital collectibles on the Solana blockchain. Your pass is more than just an
+                asset; it represents your identity and grants you access to a community where you will have exclusive
+                access to everything within power brand. In this community, we are all shaping the future of pooki.
             </p>
         </section>
-    
+
         <section id="team" class="pt-20 mt-4">
             <h2 class="text-3xl font-semibold mb-6">Team</h2>
             <p class="text-gray-600 mb-12">
@@ -89,14 +122,17 @@
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -104,14 +140,17 @@
                 </div>
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -119,14 +158,17 @@
                 </div>
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -134,14 +176,17 @@
                 </div>
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -149,14 +194,17 @@
                 </div>
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -164,14 +212,17 @@
                 </div>
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -179,29 +230,17 @@
                 </div>
 
                 <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1"
+                        src="https://placehold.co/300x300" />
                     <div class="pl-3 pt-3 flex items-center">
                         <div class="flex-grow text-xs sm:text-xl font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
-                            </a>
-                        </span>
-                    </div>
-                    <div class="pl-3 text-xs sm:text-l text-gray-600">Position</div>
-                </div>
-
-                <div class="space-y-1 text-left items-center ">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full sm:w-auto block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
-                    <div class="pl-3 pt-3 flex items-center">
-                        <div class="flex-grow text-xs sm:text-xl font-semibold">
-                            Name
-                        </div>
-                        <span>                           
-                            <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-3 pr-3"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -212,7 +251,7 @@
 
 
 
-                
+
         </section>
 
         <section id="portfolio" class="pt-20 mt-4">
@@ -221,16 +260,18 @@
                 Discover some unique digital collectibles on the Solana Blockchain.
             </p>
             <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-                
+
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -239,14 +280,16 @@
 
 
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -255,14 +298,16 @@
 
 
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -271,14 +316,16 @@
 
 
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -287,14 +334,16 @@
 
 
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -303,14 +352,16 @@
 
 
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -319,14 +370,16 @@
 
 
                 <div class="space-y-2 text-center">
-                    <img alt="Placeholder image representing a team member" id="userPFP" class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
+                    <img alt="Placeholder image representing a team member" id="userPFP"
+                        class="w-full block mx-auto aspect-w-1 aspect-h-1" src="https://placehold.co/300x300" />
                     <div class="text-center flex">
                         <div class="flex-grow font-semibold">
                             Name
                         </div>
-                        <span>                           
+                        <span>
                             <a href="https://twitter.com" target="_blank">
-                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4" alt="X">
+                                <img src="https://i.postimg.cc/Xv5B5mfh/logo-black-png-twimg-1920.png" class="h-4"
+                                    alt="X">
                             </a>
                         </span>
                     </div>
@@ -334,7 +387,7 @@
                 </div>
 
 
-                
+
             </div>
         </section>
     </div>
@@ -342,26 +395,26 @@
     <script>
         // He's a smooooooooooth operator - used so wen click header, it flows
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-        e.preventDefault();
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-        var headerHeight = 50; // Replace with the actual height of your header
-        const targetID = this.getAttribute('href');
-        const targetElement = document.querySelector(targetID);
+                var headerHeight = 50; // Replace with the actual height of your header
+                const targetID = this.getAttribute('href');
+                const targetElement = document.querySelector(targetID);
 
-        if (targetElement) {
-            const targetPosition = targetElement.getBoundingClientRect().top;
-            var offsetPosition = targetPosition + window.pageYOffset - headerHeight;
-            if(targetID=="#about"){
-                offsetPosition = targetPosition+window.pageYOffset - 150;
-            }
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
+                if (targetElement) {
+                    const targetPosition = targetElement.getBoundingClientRect().top;
+                    var offsetPosition = targetPosition + window.pageYOffset - headerHeight;
+                    if (targetID == "#about") {
+                        offsetPosition = targetPosition + window.pageYOffset - 150;
+                    }
+                    window.scrollTo({
+                        top: offsetPosition,
+                        behavior: 'smooth'
+                    });
+                }
             });
-        }
-    });
-});
+        });
 
     </script>
     <footer class="py-20"></footer> <!--gimmmme some space-->
